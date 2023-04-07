@@ -1,0 +1,7 @@
+import { combineEpics } from "redux-observable";
+import { getPlaceDetailsEpic } from "./map";
+import { searchPlaceEpic } from "./search";
+
+const rootEpic = combineEpics(searchPlaceEpic, getPlaceDetailsEpic);
+
+export default rootEpic;
